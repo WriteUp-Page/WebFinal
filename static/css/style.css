@@ -1,0 +1,304 @@
+/* 전체 설정 조정 */
+* {
+  font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+  list-style: none;
+  text-decoration: none;
+  border-collapse: collapse;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* body와 html에 높이 설정 추가 */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* 로고 위치 조정 */
+.logo img {
+  position: absolute;
+  left: 10%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* 수직 중앙 정렬 */
+  align-items: center; /* 수평 중앙 정렬 */
+  transform: translate(0%, 30%);
+  background-size: auto;
+  background-position: center;
+  height: auto;
+  max-width: auto;
+  max-height: 600px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+/* 기본 레이아웃 */
+.wrap {
+  background: linear-gradient(rgba(214, 214, 214, 0.7), rgba(0, 0, 0, 0.9)),
+    #000000;
+  width: 100%;
+  height: 100%;
+}
+
+.intro {
+  background: #5e5e5e;
+}
+
+/*로고 배경 이미지 조정*/
+.intro {
+  background-image: url("../images/img3.png");
+  width: auto;
+  height: auto;
+}
+
+/*상단 메뉴 담는 경계 조정*/
+.header {
+  display: flex;
+  width: 100%;
+  max-width: 1280px;
+  margin: auto;
+  height: 86px;
+  /* background: #989292; */
+  position: relative; /* 로고의 절대 위치를 기준으로 하는 요소 */
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+/*검색 박스 조정*/
+.searcherArea {
+  width: 300px;
+  height: 40px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.searcherArea form {
+  display: flex;
+  width: 100%;
+}
+
+.searcherArea form input {
+  border: none;
+  /* background: rgba(152, 152, 152, 0.7); */
+  width: 100%;
+  height: 40px;
+  /* color: #fff; */
+  padding-left: 10px;
+}
+
+/*검색 글자 박스 조정*/
+.searcherArea form span {
+  width: 50px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  line-height: 40px;
+}
+
+/*상단 메뉴 박스 위치 조정*/
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/*상단 메뉴 위치 조정*/
+.nav li {
+  margin: 0 40px;
+  align-content: center;
+}
+
+/*상단 메뉴 글자 색깔*/
+.nav li a {
+  color: #fff;
+}
+
+/*동아리 소개 박스 위치 조정*/
+.intro_text {
+  max-width: 1280px;
+  height: 50%;
+  margin: 50px auto 0;
+  padding: 0 20px;
+  text-align: left; /* 글자 왼쪽 정렬 */
+}
+
+/*동아리 소개 작은 글자 조정*/
+.intro_text h1 {
+  font-size: 48px;
+}
+
+/*동아리 소개 글자 조정*/
+.contents1 {
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+/*동아리 소개 글자 색깔*/
+.intro_text h1,
+.intro_text h4 {
+  color: #fff;
+}
+
+/*인트로 아래 첫 번째 박스 설정*/
+.contents1 {
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+.amount {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1280px;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  margin: 100px auto; /* 상하 여백 추가 */
+  padding: 20px; /* 내부 여백 추가 */
+  border-radius: 10px; /* 모서리 둥글게 */
+}
+
+.amount > li {
+  flex: 1 1 25%;
+  height: 132px;
+}
+
+.amount > li > div {
+  text-align: center;
+  margin-top: 37px;
+  height: 57px;
+}
+
+.amount > li:not(:last-child) > div {
+  border-right: 1px solid #e1e1e1;
+}
+
+.result {
+  font-size: 24px;
+}
+
+/* 미디어 쿼리: 화면 크기 768px 이하일 때 */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding: 10px;
+  }
+
+  .searcherArea {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .nav {
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .nav li {
+    margin-left: 10px;
+  }
+
+  .intro_text {
+    margin-left: 0;
+    padding: 0 10px;
+    text-align: center;
+  }
+
+  .intro_text h1 {
+    font-size: 36px;
+  }
+
+  .contents1 {
+    font-size: 18px;
+  }
+
+  .amount > li {
+    flex: 1 1 100%;
+    border-bottom: 1px solid #e1e1e1;
+  }
+
+  .amount > li > div {
+    margin-top: 20px;
+  }
+
+  .amount > li:not(:last-child) > div {
+    border-right: none;
+  }
+}
+
+/* 로그인 폼 스타일 */
+.login-container,
+.register-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  transform: translate(0%, 20%);
+}
+
+.login-container h1,
+.register-container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.login-container form div,
+.register-container form div {
+  margin-bottom: 15px;
+}
+
+.login-container form label,
+.register-container form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.login-container form input[type="text"],
+.login-container form input[type="password"],
+.register-container form input[type="text"],
+.register-container form input[type="email"],
+.register-container form input[type="password"] {
+  width: calc(100% - 22px); /* 패딩 포함한 너비 계산 */
+  height: 40px;
+  padding: 10px;
+  border: 1px solid #8f8f8f;
+  border-radius: 5px;
+}
+
+.login-container form input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.login-container form input[type="submit"],
+.register-container form input[type="submit"] {
+  width: 100%;
+  height: 40px;
+  background: #343434;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.login-container form input[type="submit"]:hover,
+.register-container form input[type="submit"]:hover {
+  background: #5e1a1a;
+}

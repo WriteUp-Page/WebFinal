@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Answer Question{% endblock %}
+{% block content %}
+<div class="answer-container">
+    <h1>Answer Question</h1>
+    <p><strong>Question:</strong> {{ question.title }}</p>
+    <p>{{ question.question }}</p>
+    <form method="POST" action="">
+        <textarea name="answer" rows="5" cols="40" placeholder="Write your answer here..."></textarea><br>
+        <input type="submit" value="Submit Answer">
+    </form>
+</div>
+{% endblock %}

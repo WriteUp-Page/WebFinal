@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block title %}Q&A{% endblock %}
+{% block content %}
+<div class="qa-container">
+    <h1>Q&A 게시판</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>번호</th>
+                <th>제목</th>
+                <th>작성자</th>
+                <th>작성일자</th>
+                <th>첨부파일</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for question in questions.items %}
+            <tr>
+                <td>{{ question.id }}</td>
+                <td><a href="{{ url_for('question_detail', question_id=question.id) }}">{{ question.title }}</a></td>
+                <td>{{ question.author.username }}</td>
+                <td>{{ question.date_posted.strftime('%Y-%m-%d') }}</td>
+                <td></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div class="pagination">
+        {% if questions.has_prev %}
+            <a href="{{ url_for('qa', page=questions.prev_num) }}">Previous</a>
+        {% endif %}
+        {% for page_num in questions.iter_pages() %}
+            {% if page_num %}
+                {% if page_num == questions.page %}
+                    <strong>{{ page_num }}</strong>
+                {% else %}
+                    <a href="{{ url_for('qa', page=page_num) }}">{{ page_num }}</a>
+                {% endif %}
+            {% else %}
+                ...
+            {% endif %}
+        {% endfor %}
+        {% if questions.has_next %}
+            <a href="{{ url_for('qa', page=questions.next_num) }}">Next</a>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

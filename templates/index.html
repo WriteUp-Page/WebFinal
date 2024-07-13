@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>동아리 홈페이지</title>
+  <!-- 부트스트랩 CSS 링크 -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<!-- 네비게이션 바 -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">동아리 홈페이지</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">홈 <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">소개</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">활동</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">연락처</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Jumbotron -->
+<div class="jumbotron">
+  <h1 class="display-4">안녕하세요, 우리 동아리에 오신 것을 환영합니다!</h1>
+  <p class="lead">이곳은 [동아리 이름]의 홈페이지입니다. 다양한 활동과 소식을 공유하고, 새로운 멤버를 맞이하고자 합니다.</p>
+  <hr class="my-4">
+  <p>더 알아보시려면 아래 버튼을 클릭해주세요.</p>
+  <a class="btn btn-primary btn-lg" href="#" role="button">더 알아보기</a>
+</div>
+
+<!-- 카드를 사용한 활동 소개 -->
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="card">
+        <img src="path/to/image.jpg" class="card-img-top" alt="활동 사진">
+        <div class="card-body">
+          <h5 class="card-title">활동 제목</h5>
+          <p class="card-text">이 활동에 대한 간단한 설명을 여기에 추가합니다.</p>
+          <a href="#" class="btn btn-primary">자세히 보기</a>
+        </div>
+      </div>
+    </div>
+    <!-- 추가 카드를 이 위치에 복사하여 붙여넣기 하세요 -->
+  </div>
+</div>
+
+<!-- 부트스트랩 JS 링크 -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

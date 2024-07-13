@@ -1,0 +1,36 @@
+{% extends 'base.html' %} {% block content %}
+<div class="main">
+  <img src="{{ url_for('static', filename='images/logo.png') }}" alt="error" height="100px" width="600px"/>
+
+  <ul class="amount" >
+    <li>
+      <div>
+        <div class="contents1">aa</div>
+        <div class="result">9817328</div>
+      </div>
+    </li>
+    <li>
+      <div>
+        <div class="contents1">bb</div>
+        <div class="result">93,234</div>
+      </div>
+    </li>
+    <li>
+      <div>
+        <div class="contents1">cc</div>
+        <div class="result">h187293</div>
+      </div>
+    </li>
+    <li>
+      <div>
+        <div class="contents1">dd</div>
+        <div class="result">57,221,084</div>
+      </div>
+    </li>
+  </ul>
+</div>
+
+<!--intro end-->
+
+<!-- amount end -->
+{% endblock %}

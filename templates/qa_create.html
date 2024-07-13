@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}New Question{% endblock %}
+{% block content %}
+<div class="qa-container">
+    <h1>새 질문 작성</h1>
+    <form method="POST" action="">
+        {{ form.hidden_tag() }}
+        <div>
+            {{ form.title.label }}<br>
+            {{ form.title(rows=2, cols=51) }}
+        </div>
+        <div>
+            {{ form.question.label }}<br>
+            {{ form.question(rows=5, cols=51) }}
+        </div>
+        <div>
+            {{ form.submit() }}
+        </div>
+    </form>
+</div>
+{% endblock %}
+    

@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %}Q&A{% endblock %}
+{% block content %}
+<div class="login-container">
+    <h1>Q&A 게시판</h1>
+    <form method="POST" action="">
+        {{ form.hidden_tag() }}
+        <div>
+            {{ form.title.label }}<br>
+            {{ form.title(rows=2, cols=51) }}
+        </div>
+        <div>
+            {{ form.question.label }}<br>
+            {{ form.question(rows=5, cols=51) }}
+        </div>
+        <div>
+            {{ form.submit() }}
+        </div>
+    </form>
+</div>
+
+<div class="login-container">
+    <h2>Questions</h2>
+    <form method="POST" action="">
+        {% for question in questions %}
+        <li>
+            <strong>제목 : {{ question.title }}</strong><br>
+            <p>질문: {{ question.question }}</p>
+            {% if question.is_answered %}
+            <p><strong>답변:</strong> {{ question.answer }}</p>
+            {% else %}
+            <p><em>아직 답변이 없습니다.</em></p>
+            <form method="POST" action="{{ url_for('answer', question_id=question.id) }}">
+                <textarea name="answer" rows="2" cols="40" placeholder="답변을 작성해보세요!"></textarea><br>
+                <input type="submit" value="답변 저장">
+            </form>
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+</form>
+</div>
+{% endblock %}
